@@ -10,8 +10,32 @@ Off-white     #f6f6f6
 
 /* GLOBAL STYLES 
 ------------------------------------*/
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 body {
-    background: #f6f6f6; 
+  background: #f6f6f6;
+  color: #222222;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+
+a {
+  color: #3c8453;
 }
 
 
