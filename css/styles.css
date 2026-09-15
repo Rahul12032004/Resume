@@ -41,7 +41,18 @@ a {
 
 /* HOME
 ------------------------------------*/
+.home header {
+  background: #3c8453;
+  color: #f6f6f6;
+  padding: 80px 30px;
+  text-align: center;
+}
 
+.home main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 30px;
+}
 
 /* RESUME
 ------------------------------------*/
