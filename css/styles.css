@@ -56,6 +56,22 @@ a {
 
 /* RESUME
 ------------------------------------*/
+.resume header {
+  background: #3c8453;
+  color: #f6f6f6;
+  padding: 50px 30px;
+  text-align: center;
+}
+
+.resume main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 30px;
+}
+
+.resume main > section {
+  margin-bottom: 40px;
+}
 
 /* Profile
 ------------------------------------*/
