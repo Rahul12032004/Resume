@@ -86,6 +86,21 @@ a {
 
 /* Projects
 ------------------------------------*/
+.resume main section img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.resume main section h3 {
+  margin-bottom: 10px;
+}
+
+.resume main section p {
+  margin-bottom: 15px;
+}
 
 /* Work Experience
 ------------------------------------*/
