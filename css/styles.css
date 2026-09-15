@@ -142,3 +142,13 @@ a {
 
 /* FOOTER
 ------------------------------------*/
+footer {
+  background: #222222;
+  color: #f6f6f6;
+  text-align: center;
+  padding: 25px 20px;
+}
+
+footer a {
+  color: #f6f6f6;
+}
