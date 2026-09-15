@@ -118,6 +118,13 @@ a {
 
 /* Education
 ------------------------------------*/
+.resume main section h3 {
+  font-size: 20px;
+}
+
+.resume main section p {
+  line-height: 1.6;
+}
 
 
 /* FOOTER
