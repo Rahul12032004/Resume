@@ -152,3 +152,25 @@ footer {
 footer a {
   color: #f6f6f6;
 }
+
+/* RESPONSIVE
+------------------------------------*/
+
+@media screen and (max-width: 600px) {
+  .home header,
+  .resume header {
+    padding: 40px 20px;
+  }
+
+  .home main,
+  .resume main {
+    padding: 30px 20px;
+  }
+
+  .resume main section img {
+    float: none;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 0 20px;
+  }
+}
