@@ -126,6 +126,19 @@ a {
   line-height: 1.6;
 }
 
+/* FLOAT & POSITION
+------------------------------------*/
+
+.resume main section img {
+  float: left;
+  width: 250px;
+  margin: 0 25px 15px 0;
+}
+
+.resume main section {
+  overflow: auto;
+}
+
 
 /* FOOTER
 ------------------------------------*/
