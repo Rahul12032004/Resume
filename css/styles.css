@@ -75,6 +75,14 @@ a {
 
 /* Profile
 ------------------------------------*/
+.resume main section p {
+  max-width: 800px;
+}
+
+.resume main section a {
+  display: inline-block;
+  margin-top: 10px;
+}
 
 /* Projects
 ------------------------------------*/
