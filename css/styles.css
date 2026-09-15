@@ -104,6 +104,17 @@ a {
 
 /* Work Experience
 ------------------------------------*/
+.resume main h2 {
+  margin-bottom: 20px;
+}
+
+.resume main section h3 {
+  margin-bottom: 5px;
+}
+
+.resume main section p {
+  margin-top: 5px;
+}
 
 /* Education
 ------------------------------------*/
