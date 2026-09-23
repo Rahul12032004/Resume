@@ -125,11 +125,11 @@ a {
 /* Education
 ------------------------------------*/
 .resume main section h3 {
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 .resume main section p {
-  line-height: 1.6;
+  line-height: 1.6rem;
 }
 
 /* FLOAT & POSITION
