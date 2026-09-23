@@ -150,7 +150,8 @@ footer {
   background: #222222;
   color: #f6f6f6;
   text-align: center;
-  padding: 25px 20px;
+  padding-block: 1.5625rem;
+  padding-inline: 1.25rem;
 }
 
 footer a {
