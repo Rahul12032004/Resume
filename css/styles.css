@@ -76,7 +76,7 @@ a {
 }
 
 .resume main > section {
-  margin-bottom: 40px;
+  margin-block-end: 2.5rem;
 }
 
 /* Profile
