@@ -80,7 +80,7 @@ a {
 /* Profile
 ------------------------------------*/
 .resume main section p {
-  max-inline-size: 50rem;
+  margin-block-end: 0.9375rem;
 }
 
 .resume main section a {
