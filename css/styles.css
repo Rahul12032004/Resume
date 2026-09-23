@@ -161,7 +161,7 @@ footer a {
 /* RESPONSIVE
 ------------------------------------*/
 
-@media screen and (max-width: 37.5rem)  {
+@media screen and (max-width: 37.5rem) {
   .home header,
   .resume header {
     padding-block: 2.5rem;
@@ -175,14 +175,12 @@ footer a {
   }
 
   .resume main section img {
-  float: none;
-  inline-size: 100%;
-  max-inline-size: 31.25rem;
-  margin-block-end: 1.25rem;
-  margin-inline: 0;
-}
-
-
+    float: none;
+    inline-size: 100%;
+    max-inline-size: 31.25rem;
+    margin-block-end: 1.25rem;
+    margin-inline: 0;
+  }
 }
 
 body {
