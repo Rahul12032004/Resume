@@ -127,7 +127,7 @@ a {
 }
 
 .resume main section p {
-  line-height: 1.6rem;
+  margin-block-end: 0.9375rem;
 }
 
 /* FLOAT & POSITION
@@ -183,11 +183,3 @@ footer a {
   }
 }
 
-body {
-  background: #f6f6f6;
-  color: #222222;
-  font-family: Arial, sans-serif;
-  line-height: 1.5rem;
-  font-size: 1rem;
-  margin: 0;
-}
