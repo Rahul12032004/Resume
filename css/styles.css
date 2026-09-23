@@ -111,15 +111,15 @@ a {
 /* Work Experience
 ------------------------------------*/
 .resume main h2 {
-  margin-bottom: 20px;
+  margin-block-end: 1.25rem;
 }
 
 .resume main section h3 {
-  margin-bottom: 5px;
+  margin-block-end: 0.3125rem;
 }
 
 .resume main section p {
-  margin-top: 5px;
+  margin-block-start: 0.3125rem;
 }
 
 /* Education
