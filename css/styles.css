@@ -56,7 +56,6 @@ a {
   padding-inline: 1.875rem;
 }
 
-
 /* RESUME
 ------------------------------------*/
 .resume header {
@@ -66,7 +65,6 @@ a {
   padding-inline: 1.875rem;
   text-align: center;
 }
-
 
 .resume main {
   max-inline-size: 62.5rem;
@@ -165,20 +163,23 @@ footer a {
 @media screen and (max-width: 600px) {
   .home header,
   .resume header {
-    padding: 40px 20px;
+    padding-block: 2.5rem;
+    padding-inline: 1.25rem;
   }
 
   .home main,
   .resume main {
-    padding: 30px 20px;
+    padding-block: 1.875rem;
+    padding-inline: 1.25rem;
   }
 
   .resume main section img {
-    float: none;
-    width: 100%;
-    max-width: 500px;
-    margin: 0 0 20px;
-  }
+  float: none;
+  inline-size: 100%;
+  max-inline-size: 31.25rem;
+  margin-block-end: 1.25rem;
+  margin-inline: 0;
+}
 
   /* Accessibility & Global Styles */
   body {
