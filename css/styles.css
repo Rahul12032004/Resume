@@ -85,7 +85,7 @@ a {
 
 .resume main section a {
   display: inline-block;
-  margin-top: 10px;
+  margin-block-start: 0.625rem;
 }
 
 /* Projects
