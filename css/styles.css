@@ -93,11 +93,11 @@ a {
 /* Projects
 ------------------------------------*/
 .resume main section img {
-  width: 100%;
-  max-width: 500px;
-  height: auto;
+  inline-size: 100%;
+  max-inline-size: 31.25rem;
+  block-size: auto;
   display: block;
-  margin-bottom: 20px;
+  margin-block-end: 1.25rem;
 }
 
 .resume main section h3 {
