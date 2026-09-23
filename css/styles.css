@@ -160,7 +160,7 @@ footer a {
 /* RESPONSIVE
 ------------------------------------*/
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 37.5rem)  {
   .home header,
   .resume header {
     padding-block: 2.5rem;
@@ -181,9 +181,14 @@ footer a {
   margin-inline: 0;
 }
 
-  /* Accessibility & Global Styles */
-  body {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
+
+}
+
+body {
+  background: #f6f6f6;
+  color: #222222;
+  font-family: Arial, sans-serif;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  margin: 0;
 }
