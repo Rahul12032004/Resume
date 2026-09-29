@@ -132,14 +132,6 @@ h2 {
   margin-block-end: 1.25rem;
 }
 
-.resume main section h3 {
-  margin-block-end: 0.625rem;
-}
-
-.resume main section p {
-  margin-bottom: 15px;
-}
-
 .resume main > h2 {
   border-block-end: 0.125rem solid var(--accent);
   padding-block-end: 0.5rem;
@@ -161,21 +153,11 @@ h2 {
   margin-block-end: 0.3125rem;
 }
 
-.resume main section p {
-  margin-block-start: 0.3125rem;
-}
-
 /* Education
 ------------------------------------*/
 .resume main section h3 {
   font-size: 1.25rem;
 }
-
-.resume main section p {
-  margin-block-end: 0.9375rem;
-}
-
-
 
 /* FOOTER
 ------------------------------------*/
