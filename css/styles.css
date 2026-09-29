@@ -176,7 +176,7 @@ footer a {
 /* RESPONSIVE - WIDER SCREENS
 ------------------------------------*/
 
-@media screen and (min-width: 37.5rem) {
+@media screen and (min-width: 34rem) {
   .home header {
     padding-block: 5rem;
     padding-inline: 1.875rem;
