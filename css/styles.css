@@ -1,12 +1,19 @@
-/*
-COLOR PALETTE
+:root {
+  /* Neutral colour system */
+  --neutral: oklch(50% 0.02 250);
 
-Dark green    #3c8453
-Sandy beige   #bcaa96
-Dark gray     #222222
-Light gray    #d3d4d6
-Off-white     #f6f6f6
-*/
+  --neutral-1: oklch(from var(--neutral) 98% c h);
+  --neutral-2: oklch(from var(--neutral) 92% c h);
+  --neutral-3: oklch(from var(--neutral) 84% c h);
+  --neutral-4: oklch(from var(--neutral) 74% c h);
+  --neutral-5: oklch(from var(--neutral) 64% c h);
+  --neutral-6: oklch(from var(--neutral) 52% c h);
+  --neutral-7: oklch(from var(--neutral) 40% c h);
+  --neutral-8: oklch(from var(--neutral) 28% c h);
+  --neutral-9: oklch(from var(--neutral) 18% c h);
+
+  --accent: oklch(55% 0.12 155);
+}
 
 /* GLOBAL STYLES 
 ------------------------------------*/
