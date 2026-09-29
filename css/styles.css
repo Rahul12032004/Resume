@@ -28,8 +28,8 @@ html {
 }
 
 body {
-  background: #f6f6f6;
-  color: #222222;
+  background: var(--neutral-1);
+  color: var(--neutral-9);
   font-family: Arial, sans-serif;
   line-height: 1.5rem;
   font-size: 1rem;
@@ -43,14 +43,14 @@ h3 {
 }
 
 a {
-  color: #3c8453;
+  color: var(--accent);
 }
 
 /* HOME
 ------------------------------------*/
 .home header {
-  background: #3c8453;
-  color: #f6f6f6;
+  background: var(--accent);
+  color: var(--neutral-1);
   padding-block: 5rem;
   padding-inline: 1.875rem;
   text-align: center;
@@ -66,8 +66,8 @@ a {
 /* RESUME
 ------------------------------------*/
 .resume header {
-  background: #3c8453;
-  color: #f6f6f6;
+  background: var(--accent);
+  color: var(--neutral-1);
   padding-block: 3.125rem;
   padding-inline: 1.875rem;
   text-align: center;
@@ -154,15 +154,15 @@ a {
 /* FOOTER
 ------------------------------------*/
 footer {
-  background: #222222;
-  color: #f6f6f6;
+  background: var(--neutral-9);
+  color: var(--neutral-1);
   text-align: center;
   padding-block: 1.5625rem;
   padding-inline: 1.25rem;
 }
 
 footer a {
-  color: #f6f6f6;
+  color: var(--neutral-1);
 }
 
 /* RESPONSIVE
