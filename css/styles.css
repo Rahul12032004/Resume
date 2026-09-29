@@ -31,7 +31,7 @@ html {
 }
 
 body {
-  background: var(--neutral-1);
+  background: var(--neutral-100);
   color: var(--neutral-9);
   font-family: var(--font-body);
   line-height: 1.5rem;
@@ -94,7 +94,7 @@ h2 {
 ------------------------------------*/
 .resume header {
   background: var(--accent);
-  color: var(--neutral-1);
+  color: var(--neutral-100);
   padding-block: 2.5rem;
   padding-inline: 1.25rem;
   text-align: center;
@@ -138,7 +138,7 @@ h2 {
 }
 
 .resume main > section {
-  background: var(--neutral-2);
+  background: var(--neutral-200);
   padding: 1.25rem;
   border-radius: 0.5rem;
 }
@@ -162,15 +162,15 @@ h2 {
 /* FOOTER
 ------------------------------------*/
 footer {
-  background: var(--neutral-9);
-  color: var(--neutral-1);
+  background: var(--neutral-900);
+  color: var(--neutral-100);
   text-align: center;
   padding-block: 1.5625rem;
   padding-inline: 1.25rem;
 }
 
 footer a {
-  color: var(--neutral-1);
+  color: var(--neutral-100);
 }
 
 /* RESPONSIVE - WIDER SCREENS
