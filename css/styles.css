@@ -56,16 +56,16 @@ a {
 .home header {
   background: var(--accent);
   color: var(--neutral-1);
-  padding-block: 5rem;
-  padding-inline: 1.875rem;
+  padding-block: 2.5rem;
+  padding-inline: 1.25rem;
   text-align: center;
 }
 
 .home main {
   max-inline-size: 56.25rem;
   margin-inline: auto;
-  padding-block: 2.5rem;
-  padding-inline: 1.875rem;
+  padding-block: 1.875rem;
+  padding-inline: 1.25rem;
 }
 
 /* RESUME
@@ -73,16 +73,16 @@ a {
 .resume header {
   background: var(--accent);
   color: var(--neutral-1);
-  padding-block: 3.125rem;
-  padding-inline: 1.875rem;
+  padding-block: 2.5rem;
+  padding-inline: 1.25rem;
   text-align: center;
 }
 
 .resume main {
   max-inline-size: 62.5rem;
   margin-inline: auto;
-  padding-block: 2.5rem;
-  padding-inline: 1.875rem;
+  padding-block: 1.875rem;
+  padding-inline: 1.25rem;
 }
 
 .resume main > section {
@@ -142,19 +142,7 @@ a {
   margin-block-end: 0.9375rem;
 }
 
-/* FLOAT & POSITION
-------------------------------------*/
 
-.resume main section img {
-  float: inline-start;
-  inline-size: 15.625rem;
-  margin-block: 0 0.9375rem;
-  margin-inline: 0 1.5625rem;
-}
-
-.resume main section {
-  overflow: auto;
-}
 
 /* FOOTER
 ------------------------------------*/
@@ -170,28 +158,34 @@ footer a {
   color: var(--neutral-1);
 }
 
-/* RESPONSIVE
+/* RESPONSIVE - WIDER SCREENS
 ------------------------------------*/
 
-@media screen and (max-width: 37.5rem) {
-  .home header,
+@media screen and (min-width: 37.5rem) {
+  .home header {
+    padding-block: 5rem;
+    padding-inline: 1.875rem;
+  }
+
   .resume header {
-    padding-block: 2.5rem;
-    padding-inline: 1.25rem;
+    padding-block: 3.125rem;
+    padding-inline: 1.875rem;
   }
 
   .home main,
   .resume main {
-    padding-block: 1.875rem;
-    padding-inline: 1.25rem;
+    padding-block: 2.5rem;
+    padding-inline: 1.875rem;
   }
 
   .resume main section img {
-    float: none;
-    inline-size: 100%;
-    max-inline-size: 31.25rem;
-    margin-block-end: 1.25rem;
-    margin-inline: 0;
+    float: inline-start;
+    inline-size: 15.625rem;
+    margin-block: 0 0.9375rem;
+    margin-inline: 0 1.5625rem;
+  }
+
+  .resume main section {
+    overflow: auto;
   }
 }
-
