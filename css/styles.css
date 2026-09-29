@@ -13,6 +13,9 @@
   --neutral-9: oklch(from var(--neutral) 18% c h);
 
   --accent: oklch(55% 0.12 155);
+
+  --font-body: Arial, sans-serif;
+  --font-heading: Georgia, serif;
 }
 
 /* GLOBAL STYLES 
@@ -30,7 +33,7 @@ html {
 body {
   background: var(--neutral-1);
   color: var(--neutral-9);
-  font-family: Arial, sans-serif;
+  font-family: var(--font-body);
   line-height: 1.5rem;
   font-size: 1rem;
   margin: 0;
@@ -39,12 +42,14 @@ body {
 h1,
 h2,
 h3 {
+  font-family: var(--font-heading);
   margin-block-start: 0;
 }
 
 a {
   color: var(--accent);
 }
+
 
 /* HOME
 ------------------------------------*/
