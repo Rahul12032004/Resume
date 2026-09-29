@@ -140,6 +140,17 @@ h2 {
   margin-bottom: 15px;
 }
 
+.resume main > h2 {
+  border-block-end: 0.125rem solid var(--accent);
+  padding-block-end: 0.5rem;
+}
+
+.resume main > section {
+  background: var(--neutral-2);
+  padding: 1.25rem;
+  border-radius: 0.5rem;
+}
+
 /* Work Experience
 ------------------------------------*/
 .resume main h2 {
