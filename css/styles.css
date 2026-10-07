@@ -259,4 +259,17 @@ footer a {
   .resume main section {
     overflow: auto;
   }
+    .projects header {
+    padding-block: 3.125rem;
+    padding-inline: 1.875rem;
+  }
+
+  .projects main {
+    padding-block: 2.5rem;
+    padding-inline: 1.875rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
