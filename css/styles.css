@@ -193,6 +193,27 @@ h2 {
   grid-template-columns: 1fr;
   gap: 1.5rem;
 }
+.project-card {
+  background: var(--neutral-2);
+  padding: 1.25rem;
+  border-radius: 0.5rem;
+}
+
+.project-card img {
+  inline-size: 100%;
+  block-size: auto;
+  display: block;
+  margin-block-end: 1.25rem;
+}
+
+.project-card h3 {
+  font-size: 1.25rem;
+  margin-block-end: 0.5rem;
+}
+
+.project-card p {
+  margin-block-end: 0;
+}
 
 /* FOOTER
 ------------------------------------*/
