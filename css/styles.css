@@ -201,9 +201,11 @@ h2 {
 
 .project-card img {
   inline-size: 100%;
-  block-size: auto;
+  block-size: 12rem;
+  object-fit: cover;
   display: block;
   margin-block-end: 1.25rem;
+  border-radius: 0.25rem;
 }
 
 .project-card h3 {
