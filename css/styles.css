@@ -1,3 +1,4 @@
+
 :root {
   /* Neutral colour system */
   --neutral: oklch(50% 0.02 250);
@@ -72,7 +73,10 @@ h2 {
 .home header {
   background: var(--accent);
   background-image:
-    linear-gradient(oklch(25% 0.03 155 / 0.65), oklch(25% 0.03 155 / 0.65)),
+    linear-gradient(
+      oklch(25% 0.03 155 / 0.65),
+      oklch(25% 0.03 155 / 0.65)
+    ),
     url("../images/banner.jpeg");
   background-size: cover;
   background-position: center;
@@ -219,6 +223,31 @@ h2 {
   margin-block-end: 0;
 }
 
+/* CSS SUBGRID
+------------------------------------*/
+.projects-grid {
+  align-items: start;
+}
+
+.project-card {
+  display: grid;
+  grid-row: span 3;
+  grid-template-rows: subgrid;
+  row-gap: 0.75rem;
+}
+
+.project-card img {
+  margin-block-end: 0;
+}
+
+.project-card h3 {
+  margin-block: 0;
+}
+
+.project-card p {
+  margin-block: 0;
+}
+
 /* FOOTER
 ------------------------------------*/
 footer {
@@ -295,6 +324,22 @@ footer a {
   color: var(--neutral-9);
 }
 
+/* ACTIVE PAGE NAVIGATION
+------------------------------------*/
+.navbar .active {
+  color: var(--neutral-1);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 0.1875rem;
+  text-underline-offset: 0.4rem;
+}
+
+.nav-links a:focus-visible,
+.navbar .logo:focus-visible {
+  outline: 0.125rem solid var(--accent);
+  outline-offset: 0.25rem;
+}
+
 /* RESPONSIVE - WIDER SCREENS
 ------------------------------------*/
 @media screen and (min-width: 34rem) {
@@ -338,33 +383,22 @@ footer a {
   .projects-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+}
 
-  /* Active Page Navigation */
-  .navbar .active {
-    color: var(--neutral-1);
-    text-decoration: underline;
-    text-decoration-color: var(--accent);
-    text-decoration-thickness: 0.1875rem;
-    text-underline-offset: 0.4rem;
+/* DESKTOP NAVIGATION
+------------------------------------*/
+@media screen and (min-width: 48rem) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-block: 1rem;
+    padding-inline: max(
+      1.875rem,
+      calc((100% - 62.5rem) / 2)
+    );
   }
 
-  .nav-links a:focus-visible,
-  .navbar .logo:focus-visible {
-    outline: 0.125rem solid var(--accent);
-    outline-offset: 0.25rem;
-  }
-
-  /* Desktop Navigation */
-  @media screen and (min-width: 48rem) {
-    .navbar {
-      flex-direction: row;
-      justify-content: space-between;
-      padding-block: 1rem;
-      padding-inline: max(1.875rem, calc((100% - 62.5rem) / 2));
-    }
-
-    .nav-links {
-      gap: 2rem;
-    }
+  .nav-links {
+    gap: 2rem;
   }
 }
