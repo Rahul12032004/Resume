@@ -319,4 +319,20 @@ footer a {
   .nav-links a:hover {
     color: var(--neutral-3);
   }
+
+  /* Contact Button */
+  .nav-links .contact-btn {
+    background: var(--accent);
+    color: var(--neutral-1);
+    border-radius: 0.5rem;
+    padding-block: 0.625rem;
+    padding-inline: 1.25rem;
+    text-decoration: none;
+  }
+
+  .nav-links .contact-btn:hover,
+  .nav-links .contact-btn:focus-visible {
+    background: var(--neutral-1);
+    color: var(--neutral-9);
+  }
 }
