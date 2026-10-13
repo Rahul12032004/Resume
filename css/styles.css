@@ -1,3 +1,4 @@
+
 :root {
   /* Neutral colour system */
   --neutral: oklch(50% 0.02 250);
@@ -18,15 +19,15 @@
   --font-heading: Georgia, serif;
 }
 
-/* GLOBAL STYLES 
+/* GLOBAL STYLES
 ------------------------------------*/
 html {
   box-sizing: border-box;
 }
 
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -72,7 +73,10 @@ h2 {
 .home header {
   background: var(--accent);
   background-image:
-    linear-gradient(oklch(25% 0.03 155 / 0.65), oklch(25% 0.03 155 / 0.65)),
+    linear-gradient(
+      oklch(25% 0.03 155 / 0.65),
+      oklch(25% 0.03 155 / 0.65)
+    ),
     url("../images/banner.jpeg");
   background-size: cover;
   background-position: center;
@@ -121,7 +125,7 @@ h2 {
   margin-block-start: 0.625rem;
 }
 
-/* Projects
+/* Resume Projects
 ------------------------------------*/
 .resume main section img {
   inline-size: 100%;
@@ -157,6 +161,7 @@ h2 {
 .resume main section h3 {
   font-size: 1.25rem;
 }
+
 /* PROJECTS PAGE
 ------------------------------------*/
 .projects header {
@@ -187,12 +192,13 @@ h2 {
   margin-block-end: 1.25rem;
 }
 
-/* Mobile-first grid */
+/* Mobile-first Projects Grid */
 .projects-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
 }
+
 .project-card {
   background: var(--neutral-2);
   padding: 1.25rem;
@@ -231,9 +237,70 @@ footer a {
   color: var(--neutral-1);
 }
 
+/* NAVIGATION BAR
+------------------------------------*/
+.navbar {
+  background: var(--neutral-9);
+  color: var(--neutral-1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  padding-block: 1rem;
+  padding-inline: 1.25rem;
+}
+
+.navbar .logo {
+  color: var(--neutral-1);
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: var(--neutral-1);
+  text-decoration: none;
+  font-weight: 600;
+  padding-block: 0.5rem;
+  padding-inline: 0.25rem;
+  display: inline-block;
+}
+
+.nav-links a:hover {
+  color: var(--neutral-3);
+}
+
+/* Contact Button */
+.nav-links .contact-btn {
+  background: var(--accent);
+  color: var(--neutral-1);
+  border-radius: 0.5rem;
+  padding-block: 0.625rem;
+  padding-inline: 1.25rem;
+  text-decoration: none;
+}
+
+.nav-links .contact-btn:hover,
+.nav-links .contact-btn:focus-visible {
+  background: var(--neutral-1);
+  color: var(--neutral-9);
+}
+
 /* RESPONSIVE - WIDER SCREENS
 ------------------------------------*/
-
 @media screen and (min-width: 34rem) {
   .home header {
     padding-block: 5rem;
@@ -261,6 +328,7 @@ footer a {
   .resume main section {
     overflow: auto;
   }
+
   .projects header {
     padding-block: 3.125rem;
     padding-inline: 1.875rem;
@@ -272,67 +340,6 @@ footer a {
   }
 
   .projects-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  /* Navigation Bar */
-  .navbar {
-    background: var(--neutral-9);
-    color: var(--neutral-1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.25rem;
-    padding-block: 1rem;
-    padding-inline: 1.25rem;
-  }
-
-  .navbar .logo {
-    color: var(--neutral-1);
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-decoration: none;
-  }
-
-  /* Navigation Links */
-  .nav-links {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .nav-links a {
-    color: var(--neutral-1);
-    text-decoration: none;
-    font-weight: 600;
-    padding-block: 0.5rem;
-    padding-inline: 0.25rem;
-    display: inline-block;
-  }
-
-  .nav-links a:hover {
-    color: var(--neutral-3);
-  }
-
-  /* Contact Button */
-  .nav-links .contact-btn {
-    background: var(--accent);
-    color: var(--neutral-1);
-    border-radius: 0.5rem;
-    padding-block: 0.625rem;
-    padding-inline: 1.25rem;
-    text-decoration: none;
-  }
-
-  .nav-links .contact-btn:hover,
-  .nav-links .contact-btn:focus-visible {
-    background: var(--neutral-1);
-    color: var(--neutral-9);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
