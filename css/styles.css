@@ -1,4 +1,3 @@
-
 :root {
   /* Neutral colour system */
   --neutral: oklch(50% 0.02 250);
@@ -73,10 +72,7 @@ h2 {
 .home header {
   background: var(--accent);
   background-image:
-    linear-gradient(
-      oklch(25% 0.03 155 / 0.65),
-      oklch(25% 0.03 155 / 0.65)
-    ),
+    linear-gradient(oklch(25% 0.03 155 / 0.65), oklch(25% 0.03 155 / 0.65)),
     url("../images/banner.jpeg");
   background-size: cover;
   background-position: center;
@@ -341,5 +337,20 @@ footer a {
 
   .projects-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  /* Active Page Navigation */
+  .navbar .active {
+    color: var(--neutral-1);
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+    text-decoration-thickness: 0.1875rem;
+    text-underline-offset: 0.4rem;
+  }
+
+  .nav-links a:focus-visible,
+  .navbar .logo:focus-visible {
+    outline: 0.125rem solid var(--accent);
+    outline-offset: 0.25rem;
   }
 }
