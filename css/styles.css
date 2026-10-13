@@ -353,4 +353,18 @@ footer a {
     outline: 0.125rem solid var(--accent);
     outline-offset: 0.25rem;
   }
+
+  /* Desktop Navigation */
+  @media screen and (min-width: 48rem) {
+    .navbar {
+      flex-direction: row;
+      justify-content: space-between;
+      padding-block: 1rem;
+      padding-inline: max(1.875rem, calc((100% - 62.5rem) / 2));
+    }
+
+    .nav-links {
+      gap: 2rem;
+    }
+  }
 }
