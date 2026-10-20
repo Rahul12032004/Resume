@@ -394,4 +394,23 @@ footer a {
   .nav-links {
     gap: 2rem;
   }
+
+  /* Contact button */
+  .nav-links .contact-btn {
+    font: inherit;
+    font-weight: 600;
+    background: var(--accent);
+    color: var(--neutral-1);
+    border: none;
+    border-radius: 0.5rem;
+    padding-block: 0.625rem;
+    padding-inline: 1.25rem;
+    cursor: pointer;
+    anchor-name: --contact-button;
+  }
+
+  .nav-links .contact-btn:focus-visible {
+    outline: 0.125rem solid var(--neutral-1);
+    outline-offset: 0.25rem;
+  }
 }
