@@ -413,4 +413,26 @@ footer a {
     outline: 0.125rem solid var(--neutral-1);
     outline-offset: 0.25rem;
   }
+
+  /* Contact popover */
+  #contact-popover {
+    position: fixed;
+    position-anchor: --contact-button;
+    position-area: bottom span-left;
+    position-try-fallbacks: flip-inline, flip-block;
+
+    inline-size: min(100vi, max(33vi, 26rem));
+    max-inline-size: none;
+    min-inline-size: 0;
+
+    margin: 0;
+    padding: 0;
+    border: 0.125rem solid var(--neutral-3);
+    border-radius: 0.75rem;
+    border-end-start-radius: 0;
+
+    background: var(--neutral-1);
+    color: var(--neutral-9);
+    box-shadow: 0 0.75rem 2rem oklch(0% 0 0 / 0.25);
+  }
 }
