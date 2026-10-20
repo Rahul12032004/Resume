@@ -517,4 +517,53 @@ footer a {
     background: var(--accent);
     color: var(--neutral-1);
   }
+
+  /* Small contact layout */
+  @container (width < 24rem) {
+    .contact-card {
+      grid-template-columns: 1fr;
+    }
+
+    .contact-photo {
+      block-size: 12rem;
+    }
+
+    .contact-bio {
+      display: block;
+    }
+  }
+
+  /* Medium contact layout */
+  @container (24rem <= width < 28rem) {
+    .contact-card {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+      align-items: start;
+    }
+
+    .contact-photo {
+      block-size: 100%;
+      min-block-size: 9rem;
+    }
+
+    .contact-bio {
+      display: none;
+    }
+  }
+
+  /* Large contact layout */
+  @container (width >= 28rem) {
+    .contact-card {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+      align-items: start;
+    }
+
+    .contact-photo {
+      block-size: 100%;
+      min-block-size: 12rem;
+    }
+
+    .contact-bio {
+      display: block;
+    }
+  }
 }
