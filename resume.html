@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -8,31 +9,84 @@
   </head>
 
   <body class="resume">
-    <!-- // NAVIGATION // -->
+    <!-- Navigation -->
     <nav class="navbar" aria-label="Main navigation">
-      <a href="index.html" class="logo"> Rahul Kumar </a>
+      <a href="index.html" class="logo">Rahul Kumar</a>
 
       <ul class="nav-links">
         <li>
-          <a href="resume.html" class="active" aria-current="page"> Resume </a>
+          <a href="resume.html" class="active" aria-current="page">
+            Resume
+          </a>
         </li>
         <li>
           <a href="projects.html">Projects</a>
         </li>
         <li>
-          <a href="mailto:rjaat7513@gmail.com" class="contact-btn"> Contact </a>
+          <button
+            type="button"
+            class="contact-btn"
+            popovertarget="contact-popover"
+          >
+            Contact
+          </button>
         </li>
       </ul>
     </nav>
 
-    <!-- // INTRO // -->
+    <!-- Contact popover -->
+    <article id="contact-popover" popover="auto">
+      <div class="contact-card">
+        <button
+          type="button"
+          class="close-btn"
+          popovertarget="contact-popover"
+          popovertargetaction="hide"
+          aria-label="Close contact information"
+        >
+          &times;
+        </button>
+
+        <img
+          src="images/Rahul1.jpg"
+          alt="Portrait of Rahul Kumar"
+          class="contact-photo"
+        />
+
+        <div class="contact-info">
+          <h2>Rahul Kumar</h2>
+
+          <p class="contact-bio">
+            I am a Communication Design student at North Island
+            College with a passion for web development, UI/UX
+            design, and creative digital experiences.
+          </p>
+
+          <p>
+            <strong>Email:</strong>
+            <a href="mailto:rahul.design@example.com">
+              rahul.design@example.com
+            </a>
+          </p>
+
+          <p>
+            <strong>Phone:</strong>
+            <a href="tel:+12505550123">
+              (250) 555-0123
+            </a>
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Introduction -->
     <header>
       <h1>Rahul Kumar</h1>
       <h2>Communication Design Student & Aspiring Web Developer</h2>
     </header>
 
     <main>
-      <!-- // PROFILE // -->
+      <!-- Profile -->
       <section>
         <h2>Profile</h2>
         <p>
@@ -44,7 +98,7 @@
         </p>
       </section>
 
-      <!-- // PROJECTS // -->
+      <!-- Projects -->
       <!--
       <h2>Projects</h2>
       <section>
@@ -104,14 +158,13 @@
       </section>
       -->
 
-      <!-- // WORK EXPERIENCE // -->
+      <!-- Work experience -->
       <h2>Work Experience</h2>
 
       <section>
         <h3>Customer Service Manager</h3>
         <p>Walmart Canada</p>
         <p>2025 - Present</p>
-
         <p>
           Managing customer service operations and supporting daily store
           activities. I have experience working on the sales floor and outside
@@ -125,7 +178,6 @@
         <h3>Cashier</h3>
         <p>Reliance Smart, Kaithal, India</p>
         <p>2025</p>
-
         <p>
           Assisted customers with purchases, handled cash and payments,
           maintained a clean checkout area, and supported daily store
@@ -137,7 +189,6 @@
         <h3>Office Administrative Executive</h3>
         <p>Private Business, India</p>
         <p>2023 - 2024</p>
-
         <p>
           Supported daily office operations, organized documents, communicated
           with customers, and completed basic administrative tasks using
@@ -145,14 +196,13 @@
         </p>
       </section>
 
-      <!-- // EDUCATION & CERTIFICATIONS // -->
+      <!-- Education -->
       <h2>Education</h2>
 
       <section>
         <h3>North Island College - Courtenay, British Columbia</h3>
         <p>Communication Design Diploma - Design & Development Stream</p>
         <p>2025 - Present</p>
-
         <p>
           Studying graphic design, UI/UX design, web development, HTML, CSS,
           JavaScript, typography, and digital design.
@@ -162,7 +212,6 @@
       <section>
         <h3>Senior Secondary Education - India</h3>
         <p>Non-Medical with Computer, 2022</p>
-
         <p>
           Completed senior secondary education with a focus on mathematics,
           science, and computer studies.
@@ -170,11 +219,13 @@
       </section>
     </main>
 
-    <!-- // FOOTER INFO // -->
+    <!-- Footer -->
     <footer>
       <p>
         © 2026 by Rahul Kumar |
-        <a href="mailto:rjaat7513@gmail.com"> rjaat7513@gmail.com </a>
+        <a href="mailto:rjaat7513@gmail.com">
+          rjaat7513@gmail.com
+        </a>
       </p>
     </footer>
   </body>
