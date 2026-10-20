@@ -492,4 +492,29 @@ footer a {
     color: var(--accent);
     overflow-wrap: anywhere;
   }
+
+  /* Close button */
+  .close-btn {
+    position: absolute;
+    inset-block-start: 0.5rem;
+    inset-inline-end: 0.5rem;
+    z-index: 1;
+
+    background: var(--neutral-9);
+    color: var(--neutral-1);
+    border: none;
+    border-radius: 50%;
+
+    inline-size: 2rem;
+    block-size: 2rem;
+
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .close-btn:hover,
+  .close-btn:focus-visible {
+    background: var(--accent);
+    color: var(--neutral-1);
+  }
 }
