@@ -1,3 +1,4 @@
+
 :root {
   /* Neutral colour system */
   --neutral: oklch(50% 0.02 250);
@@ -18,8 +19,7 @@
   --font-heading: Georgia, serif;
 }
 
-/* GLOBAL STYLES
-------------------------------------*/
+/* Global styles */
 html {
   box-sizing: border-box;
 }
@@ -67,8 +67,7 @@ h2 {
   margin-block-end: 0;
 }
 
-/* HOME
-------------------------------------*/
+/* Home */
 .home header {
   background: var(--accent);
   background-image:
@@ -89,8 +88,7 @@ h2 {
   padding-inline: 1.25rem;
 }
 
-/* RESUME
-------------------------------------*/
+/* Resume */
 .resume header {
   background: var(--accent);
   color: var(--neutral-1);
@@ -110,8 +108,7 @@ h2 {
   margin-block-end: 2.5rem;
 }
 
-/* Profile
-------------------------------------*/
+/* Profile */
 .resume main section p {
   margin-block-end: 0.9375rem;
 }
@@ -121,8 +118,7 @@ h2 {
   margin-block-start: 0.625rem;
 }
 
-/* Resume Projects
-------------------------------------*/
+/* Resume projects */
 .resume main section img {
   inline-size: 100%;
   max-inline-size: 31.25rem;
@@ -142,8 +138,7 @@ h2 {
   border-radius: 0.5rem;
 }
 
-/* Work Experience
-------------------------------------*/
+/* Work experience */
 .resume main h2 {
   margin-block-end: 1.25rem;
 }
@@ -152,14 +147,12 @@ h2 {
   margin-block-end: 0.3125rem;
 }
 
-/* Education
-------------------------------------*/
+/* Education */
 .resume main section h3 {
   font-size: 1.25rem;
 }
 
-/* PROJECTS PAGE
-------------------------------------*/
+/* Projects page */
 .projects header {
   background: var(--accent);
   color: var(--neutral-1);
@@ -188,44 +181,18 @@ h2 {
   margin-block-end: 1.25rem;
 }
 
-/* Mobile-first Projects Grid */
+/* Mobile-first projects grid */
 .projects-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
+  align-items: start;
 }
 
 .project-card {
   background: var(--neutral-2);
   padding: 1.25rem;
   border-radius: 0.5rem;
-}
-
-.project-card img {
-  inline-size: 100%;
-  block-size: 12rem;
-  object-fit: cover;
-  display: block;
-  margin-block-end: 1.25rem;
-  border-radius: 0.25rem;
-}
-
-.project-card h3 {
-  font-size: 1.25rem;
-  margin-block-end: 0.5rem;
-}
-
-.project-card p {
-  margin-block-end: 0;
-}
-
-/* CSS SUBGRID
-------------------------------------*/
-.projects-grid {
-  align-items: start;
-}
-
-.project-card {
   display: grid;
   grid-row: span 3;
   grid-template-rows: subgrid;
@@ -233,10 +200,16 @@ h2 {
 }
 
 .project-card img {
+  inline-size: 100%;
+  block-size: 12rem;
+  object-fit: cover;
+  display: block;
   margin-block-end: 0;
+  border-radius: 0.25rem;
 }
 
 .project-card h3 {
+  font-size: 1.25rem;
   margin-block: 0;
 }
 
@@ -244,8 +217,7 @@ h2 {
   margin-block: 0;
 }
 
-/* FOOTER
-------------------------------------*/
+/* Footer */
 footer {
   background: var(--neutral-9);
   color: var(--neutral-1);
@@ -258,8 +230,7 @@ footer a {
   color: var(--neutral-1);
 }
 
-/* NAVIGATION BAR
-------------------------------------*/
+/* Navigation bar */
 .navbar {
   background: var(--neutral-9);
   color: var(--neutral-1);
@@ -279,7 +250,7 @@ footer a {
   text-decoration: none;
 }
 
-/* Navigation Links */
+/* Navigation links */
 .nav-links {
   display: flex;
   flex-wrap: wrap;
@@ -304,14 +275,19 @@ footer a {
   color: var(--neutral-3);
 }
 
-/* Contact Button */
+/* Contact button */
 .nav-links .contact-btn {
+  font: inherit;
+  font-weight: 600;
   background: var(--accent);
   color: var(--neutral-1);
+  border: none;
   border-radius: 0.5rem;
   padding-block: 0.625rem;
   padding-inline: 1.25rem;
   text-decoration: none;
+  cursor: pointer;
+  anchor-name: --contact-button;
 }
 
 .nav-links .contact-btn:hover,
@@ -320,8 +296,12 @@ footer a {
   color: var(--neutral-9);
 }
 
-/* ACTIVE PAGE NAVIGATION
-------------------------------------*/
+.nav-links .contact-btn:focus-visible {
+  outline: 0.125rem solid var(--accent);
+  outline-offset: 0.25rem;
+}
+
+/* Active page navigation */
 .navbar .active {
   color: var(--neutral-1);
   text-decoration: underline;
@@ -336,8 +316,153 @@ footer a {
   outline-offset: 0.25rem;
 }
 
-/* RESPONSIVE - WIDER SCREENS
-------------------------------------*/
+/* Contact popover */
+#contact-popover {
+  position: fixed;
+  position-anchor: --contact-button;
+  position-area: bottom span-left;
+  position-try-fallbacks: flip-inline, flip-block;
+
+  inline-size: min(100vi, max(33vi, 26rem));
+  max-inline-size: none;
+  min-inline-size: 0;
+
+  margin: 0;
+  padding: 0;
+  border: 0.125rem solid var(--neutral-3);
+  border-radius: 0.75rem;
+  border-end-start-radius: 0;
+
+  background: var(--neutral-1);
+  color: var(--neutral-9);
+  box-shadow: 0 0.75rem 2rem oklch(0% 0 0 / 0.25);
+
+  container-type: inline-size;
+  resize: horizontal;
+  overflow: auto;
+  direction: rtl;
+}
+
+/* Dim the page behind the popover */
+#contact-popover::backdrop {
+  background: oklch(0% 0 0 / 0.55);
+  backdrop-filter: blur(0.1875rem);
+}
+
+/* Contact card */
+.contact-card {
+  direction: ltr;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1.5rem;
+  position: relative;
+  overflow-wrap: anywhere;
+}
+
+/* Profile photo */
+.contact-photo {
+  inline-size: 100%;
+  block-size: 12rem;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0.5rem;
+}
+
+/* Contact details */
+.contact-info {
+  min-inline-size: 0;
+}
+
+.contact-info h2 {
+  font-size: 1.5rem;
+  margin-block-end: 0.75rem;
+}
+
+.contact-info p {
+  margin-block: 0 0.75rem;
+}
+
+.contact-info a {
+  color: var(--accent);
+  overflow-wrap: anywhere;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  inset-block-start: 0.5rem;
+  inset-inline-end: 0.5rem;
+  z-index: 1;
+
+  background: var(--neutral-9);
+  color: var(--neutral-1);
+  border: none;
+  border-radius: 50%;
+
+  inline-size: 2rem;
+  block-size: 2rem;
+
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus-visible {
+  background: var(--accent);
+  color: var(--neutral-1);
+}
+
+/* Small contact layout */
+@container (width < 24rem) {
+  .contact-card {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-photo {
+    block-size: 12rem;
+  }
+
+  .contact-bio {
+    display: block;
+  }
+}
+
+/* Medium contact layout */
+@container (24rem <= width < 28rem) {
+  .contact-card {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+    align-items: start;
+  }
+
+  .contact-photo {
+    block-size: 100%;
+    min-block-size: 9rem;
+  }
+
+  .contact-bio {
+    display: none;
+  }
+}
+
+/* Large contact layout */
+@container (width >= 28rem) {
+  .contact-card {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+    align-items: start;
+  }
+
+  .contact-photo {
+    block-size: 100%;
+    min-block-size: 12rem;
+  }
+
+  .contact-bio {
+    display: block;
+  }
+}
+
+/* Responsive layout for wider screens */
 @media screen and (min-width: 34rem) {
   .home header {
     padding-block: 5rem;
@@ -381,8 +506,7 @@ footer a {
   }
 }
 
-/* DESKTOP NAVIGATION
-------------------------------------*/
+/* Desktop navigation */
 @media screen and (min-width: 48rem) {
   .navbar {
     flex-direction: row;
@@ -393,177 +517,5 @@ footer a {
 
   .nav-links {
     gap: 2rem;
-  }
-
-  /* Contact button */
-  .nav-links .contact-btn {
-    font: inherit;
-    font-weight: 600;
-    background: var(--accent);
-    color: var(--neutral-1);
-    border: none;
-    border-radius: 0.5rem;
-    padding-block: 0.625rem;
-    padding-inline: 1.25rem;
-    cursor: pointer;
-    anchor-name: --contact-button;
-  }
-
-  .nav-links .contact-btn:focus-visible {
-    outline: 0.125rem solid var(--neutral-1);
-    outline-offset: 0.25rem;
-  }
-
-  /* Contact popover */
-  #contact-popover {
-    position: fixed;
-    position-anchor: --contact-button;
-    position-area: bottom span-left;
-    position-try-fallbacks: flip-inline, flip-block;
-
-    inline-size: min(100vi, max(33vi, 26rem));
-    max-inline-size: none;
-    min-inline-size: 0;
-
-    margin: 0;
-    padding: 0;
-    border: 0.125rem solid var(--neutral-3);
-    border-radius: 0.75rem;
-    border-end-start-radius: 0;
-
-    background: var(--neutral-1);
-    color: var(--neutral-9);
-    box-shadow: 0 0.75rem 2rem oklch(0% 0 0 / 0.25);
-  }
-
-  /* Popover background */
-  #contact-popover::backdrop {
-    background: oklch(0% 0 0 / 0.55);
-    backdrop-filter: blur(0.1875rem);
-  }
-
-  /* Popover resizing */
-  #contact-popover {
-    container-type: inline-size;
-    resize: horizontal;
-    overflow: auto;
-    direction: rtl;
-  }
-
-  /* Contact card */
-  .contact-card {
-    direction: ltr;
-  }
-
-  /* Contact card layout */
-  .contact-card {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    padding: 1.5rem;
-    position: relative;
-    overflow-wrap: anywhere;
-  }
-
-  /* Profile photo */
-  .contact-photo {
-    inline-size: 100%;
-    block-size: 12rem;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 0.5rem;
-  }
-
-  /* Contact details */
-  .contact-info {
-    min-inline-size: 0;
-  }
-
-  .contact-info h2 {
-    font-size: 1.5rem;
-    margin-block-end: 0.75rem;
-  }
-
-  .contact-info p {
-    margin-block: 0 0.75rem;
-  }
-
-  .contact-info a {
-    color: var(--accent);
-    overflow-wrap: anywhere;
-  }
-
-  /* Close button */
-  .close-btn {
-    position: absolute;
-    inset-block-start: 0.5rem;
-    inset-inline-end: 0.5rem;
-    z-index: 1;
-
-    background: var(--neutral-9);
-    color: var(--neutral-1);
-    border: none;
-    border-radius: 50%;
-
-    inline-size: 2rem;
-    block-size: 2rem;
-
-    font-size: 1.5rem;
-    cursor: pointer;
-  }
-
-  .close-btn:hover,
-  .close-btn:focus-visible {
-    background: var(--accent);
-    color: var(--neutral-1);
-  }
-
-  /* Small contact layout */
-  @container (width < 24rem) {
-    .contact-card {
-      grid-template-columns: 1fr;
-    }
-
-    .contact-photo {
-      block-size: 12rem;
-    }
-
-    .contact-bio {
-      display: block;
-    }
-  }
-
-  /* Medium contact layout */
-  @container (24rem <= width < 28rem) {
-    .contact-card {
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
-      align-items: start;
-    }
-
-    .contact-photo {
-      block-size: 100%;
-      min-block-size: 9rem;
-    }
-
-    .contact-bio {
-      display: none;
-    }
-  }
-
-  /* Large contact layout */
-  @container (width >= 28rem) {
-    .contact-card {
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
-      align-items: start;
-    }
-
-    .contact-photo {
-      block-size: 100%;
-      min-block-size: 12rem;
-    }
-
-    .contact-bio {
-      display: block;
-    }
   }
 }
