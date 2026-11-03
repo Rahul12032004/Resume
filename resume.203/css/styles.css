@@ -1,0 +1,543 @@
+:root {
+  /* Neutral colour system */
+  --neutral: oklch(50% 0.02 250);
+
+  --neutral-1: oklch(from var(--neutral) 98% c h);
+  --neutral-2: oklch(from var(--neutral) 92% c h);
+  --neutral-3: oklch(from var(--neutral) 84% c h);
+  --neutral-4: oklch(from var(--neutral) 74% c h);
+  --neutral-5: oklch(from var(--neutral) 64% c h);
+  --neutral-6: oklch(from var(--neutral) 52% c h);
+  --neutral-7: oklch(from var(--neutral) 40% c h);
+  --neutral-8: oklch(from var(--neutral) 28% c h);
+  --neutral-9: oklch(from var(--neutral) 18% c h);
+
+  --accent: oklch(55% 0.12 155);
+
+  --font-body: Arial, sans-serif;
+  --font-heading: Georgia, serif;
+}
+
+/* Global styles */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background: var(--neutral-1);
+  color: var(--neutral-9);
+  font-family: var(--font-body);
+  line-height: 1.5rem;
+  font-size: 1rem;
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  margin-block-start: 0;
+}
+
+a {
+  color: var(--accent);
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.1;
+}
+
+h2 {
+  line-height: 1.2;
+}
+
+.home header h2,
+.resume header h2 {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  font-weight: normal;
+  margin-block-end: 0;
+}
+
+/* Home */
+.home header {
+  background: var(--accent);
+  background-image:
+    linear-gradient(oklch(25% 0.03 155 / 0.65), oklch(25% 0.03 155 / 0.65)),
+    url("../images/banner.jpeg");
+  background-size: cover;
+  background-position: center;
+  color: var(--neutral-1);
+  padding-block: 2.5rem;
+  padding-inline: 1.25rem;
+  text-align: center;
+}
+
+.home main {
+  max-inline-size: 56.25rem;
+  margin-inline: auto;
+  padding-block: 1.875rem;
+  padding-inline: 1.25rem;
+}
+
+/* Resume */
+.resume header {
+  background: var(--accent);
+  color: var(--neutral-1);
+  padding-block: 2.5rem;
+  padding-inline: 1.25rem;
+  text-align: center;
+}
+
+.resume main {
+  max-inline-size: 62.5rem;
+  margin-inline: auto;
+  padding-block: 1.875rem;
+  padding-inline: 1.25rem;
+}
+
+.resume main > section {
+  margin-block-end: 2.5rem;
+}
+
+/* Profile */
+.resume main section p {
+  margin-block-end: 0.9375rem;
+}
+
+.resume main section a {
+  display: inline-block;
+  margin-block-start: 0.625rem;
+}
+
+/* Resume projects */
+.resume main section img {
+  inline-size: 100%;
+  max-inline-size: 31.25rem;
+  block-size: auto;
+  display: block;
+  margin-block-end: 1.25rem;
+}
+
+.resume main > h2 {
+  border-block-end: 0.125rem solid var(--accent);
+  padding-block-end: 0.5rem;
+}
+
+.resume main > section {
+  background: var(--neutral-2);
+  padding: 1.25rem;
+  border-radius: 0.5rem;
+}
+
+/* Work experience */
+.resume main h2 {
+  margin-block-end: 1.25rem;
+}
+
+.resume main section h3 {
+  margin-block-end: 0.3125rem;
+}
+
+/* Education */
+.resume main section h3 {
+  font-size: 1.25rem;
+}
+
+/* Projects page */
+.projects header {
+  background: var(--accent);
+  color: var(--neutral-1);
+  padding-block: 2.5rem;
+  padding-inline: 1.25rem;
+  text-align: center;
+}
+
+.projects header h2 {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  font-weight: normal;
+  margin-block-end: 0;
+}
+
+.projects main {
+  max-inline-size: 62.5rem;
+  margin-inline: auto;
+  padding-block: 1.875rem;
+  padding-inline: 1.25rem;
+}
+
+.projects main > h2 {
+  border-block-end: 0.125rem solid var(--accent);
+  padding-block-end: 0.5rem;
+  margin-block-end: 1.25rem;
+}
+
+/* Mobile-first projects grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.project-card {
+  background: var(--neutral-2);
+  padding: 1.25rem;
+  border-radius: 0.5rem;
+  display: grid;
+  grid-row: span 3;
+  grid-template-rows: subgrid;
+  row-gap: 0.75rem;
+}
+
+.project-card img {
+  inline-size: 100%;
+  block-size: 12rem;
+  object-fit: cover;
+  display: block;
+  margin-block-end: 0;
+  border-radius: 0.25rem;
+}
+
+.project-card h3 {
+  font-size: 1.25rem;
+  margin-block: 0;
+}
+
+.project-card p {
+  margin-block: 0;
+}
+
+/* Footer */
+footer {
+  background: var(--neutral-9);
+  color: var(--neutral-1);
+  text-align: center;
+  padding-block: 1.5625rem;
+  padding-inline: 1.25rem;
+}
+
+footer a {
+  color: var(--neutral-1);
+}
+
+/* Navigation bar */
+.navbar {
+  background: var(--neutral-9);
+  color: var(--neutral-1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  padding-block: 1rem;
+  padding-inline: 1.25rem;
+}
+
+.navbar .logo {
+  color: var(--neutral-1);
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Navigation links */
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: var(--neutral-1);
+  text-decoration: none;
+  font-weight: 600;
+  padding-block: 0.5rem;
+  padding-inline: 0.25rem;
+  display: inline-block;
+}
+
+.nav-links a:hover {
+  color: var(--neutral-3);
+}
+
+/* Contact button */
+.nav-links .contact-btn {
+  font: inherit;
+  font-weight: 600;
+  background: var(--accent);
+  color: var(--neutral-1);
+  border: none;
+  border-radius: 0.5rem;
+  padding-block: 0.625rem;
+  padding-inline: 1.25rem;
+  text-decoration: none;
+  cursor: pointer;
+  anchor-name: --contact-button;
+}
+
+.nav-links .contact-btn:hover,
+.nav-links .contact-btn:focus-visible {
+  background: var(--neutral-1);
+  color: var(--neutral-9);
+}
+
+.nav-links .contact-btn:focus-visible {
+  outline: 0.125rem solid var(--accent);
+  outline-offset: 0.25rem;
+}
+
+/* Active page navigation */
+.navbar .active {
+  color: var(--neutral-1);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 0.1875rem;
+  text-underline-offset: 0.4rem;
+}
+
+.nav-links a:focus-visible,
+.navbar .logo:focus-visible {
+  outline: 0.125rem solid var(--accent);
+  outline-offset: 0.25rem;
+}
+
+/* Contact popover */
+#contact-popover {
+  position: fixed;
+  position-anchor: --contact-button;
+  position-area: bottom span-left;
+  position-try-fallbacks: flip-inline, flip-block;
+
+  inline-size: min(100vi, max(33vi, 26rem));
+  max-inline-size: none;
+  min-inline-size: 0;
+
+  margin: 0;
+  padding: 0;
+  border: 0.125rem solid var(--neutral-3);
+  border-radius: 0.75rem;
+  border-end-start-radius: 0;
+
+  background: var(--neutral-1);
+  color: var(--neutral-9);
+  box-shadow: 0 0.75rem 2rem oklch(0% 0 0 / 0.25);
+
+  container-type: inline-size;
+  resize: horizontal;
+  overflow: auto;
+  direction: rtl;
+}
+
+/* Dim the page behind the popover */
+#contact-popover::backdrop {
+  background: oklch(0% 0 0 / 0.55);
+  backdrop-filter: blur(0.1875rem);
+}
+
+/* Contact card */
+.contact-card {
+  direction: ltr;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1.5rem;
+  position: relative;
+  overflow-wrap: anywhere;
+}
+
+/* Profile photo */
+.contact-photo {
+  inline-size: 100%;
+  block-size: 12rem;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0.5rem;
+}
+
+/* Contact details */
+.contact-info {
+  min-inline-size: 0;
+}
+
+.contact-info h2 {
+  font-size: 1.5rem;
+  margin-block-end: 0.75rem;
+}
+
+.contact-info p {
+  margin-block: 0 0.75rem;
+}
+
+.contact-info a {
+  color: var(--accent);
+  overflow-wrap: anywhere;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  inset-block-start: 0.5rem;
+  inset-inline-end: 0.5rem;
+  z-index: 1;
+
+  background: var(--neutral-9);
+  color: var(--neutral-1);
+  border: none;
+  border-radius: 50%;
+
+  inline-size: 2rem;
+  block-size: 2rem;
+
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus-visible {
+  background: var(--accent);
+  color: var(--neutral-1);
+}
+
+/* Small contact layout */
+@container (width < 24rem) {
+  .contact-card {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-photo {
+    block-size: 12rem;
+  }
+
+  .contact-bio {
+    display: block;
+  }
+}
+
+/* Medium contact layout */
+@container (24rem <= width < 28rem) {
+  .contact-card {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+    align-items: start;
+  }
+
+  .contact-photo {
+    block-size: 100%;
+    min-block-size: 9rem;
+  }
+
+  .contact-bio {
+    display: none;
+  }
+}
+
+/* Large contact layout */
+@container (width >= 28rem) {
+  .contact-card {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+    align-items: start;
+  }
+
+  .contact-photo {
+    block-size: 100%;
+    min-block-size: 12rem;
+  }
+
+  .contact-bio {
+    display: block;
+  }
+}
+
+/* Responsive layout for wider screens */
+@media screen and (min-width: 34rem) {
+  .home header {
+    padding-block: 5rem;
+    padding-inline: 1.875rem;
+  }
+
+  .resume header {
+    padding-block: 3.125rem;
+    padding-inline: 1.875rem;
+  }
+
+  .home main,
+  .resume main {
+    padding-block: 2.5rem;
+    padding-inline: 1.875rem;
+  }
+
+  .resume main section img {
+    float: inline-start;
+    inline-size: 15.625rem;
+    margin-block: 0 0.9375rem;
+    margin-inline: 0 1.5625rem;
+  }
+
+  .resume main section {
+    overflow: auto;
+  }
+
+  .projects header {
+    padding-block: 3.125rem;
+    padding-inline: 1.875rem;
+  }
+
+  .projects main {
+    padding-block: 2.5rem;
+    padding-inline: 1.875rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Desktop navigation */
+@media screen and (min-width: 48rem) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-block: 1rem;
+    padding-inline: max(1.875rem, calc((100% - 62.5rem) / 2));
+  }
+
+  .nav-links {
+    gap: 2rem;
+  }
+}
+
+.nav-links .contact-btn,
+.close-btn {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.nav-links .contact-btn:hover,
+.close-btn:hover {
+  transform: translateY(-0.375rem);
+  box-shadow: 0 0.375rem 0.75rem oklch(0% 0 0 / 0.2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-links .contact-btn,
+  .close-btn {
+    transition: none;
+    transform: none;
+  }
+}
