@@ -575,3 +575,31 @@ footer a {
     transition: none;
   }
 }
+
+@keyframes logoEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(-1rem) scale(0.9);
+  }
+
+  70% {
+    opacity: 1;
+    transform: translateY(0.125rem) scale(1.05);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.navbar .logo {
+  display: inline-block;
+  animation: logoEntrance 0.9s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar .logo {
+    animation: none;
+  }
+}
