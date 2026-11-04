@@ -671,28 +671,28 @@ footer a {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
-  .shape-clip {
-    inline-size: 7rem;
-    block-size: 7rem;
-    background: var(--accent);
-    clip-path: circle(50% at 50% 50%);
-    animation: clipMorph 3s ease-in-out infinite alternate;
+
+.shape-clip {
+  inline-size: 7rem;
+  block-size: 7rem;
+  background: var(--accent);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  animation: clipMorph 3s ease-in-out infinite alternate;
+}
+
+@keyframes clipMorph {
+  0% {
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
   }
 
-  @keyframes clipMorph {
-    0% {
-      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-    }
-
-    50% {
-      clip-path: polygon(50% 0%, 100% 100%, 0% 100%, 0% 100%);
-    }
-
-    100% {
-      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-    }
+  50% {
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%, 0% 100%);
   }
 
+  100% {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
 
 .shape-filter {
   inline-size: 7rem;
@@ -765,4 +765,10 @@ footer a {
   }
 }
 
-
+@media (prefers-reduced-motion: reduce) {
+  .shape-clip,
+  .shape-blend,
+  .shape-blend::after {
+    animation: none;
+  }
+}
