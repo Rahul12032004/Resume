@@ -686,3 +686,34 @@ footer a {
     animation: none;
   }
 }
+
+.projects .project-card:has(a[href="animations.html"]) {
+  grid-row: span 4;
+}
+
+.projects .project-card a[href="animations.html"] {
+  display: inline-block;
+  align-self: end;
+  justify-self: start;
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+  border-radius: 0.5rem;
+  background: var(--accent);
+  color: var(--neutral-1);
+  text-decoration: none;
+  font-weight: 600;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.projects .project-card a[href="animations.html"]:hover {
+  background: var(--neutral-9);
+  transform: translateY(-0.25rem);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .projects .project-card a[href="animations.html"] {
+    transition: none;
+  }
+}
