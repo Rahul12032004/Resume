@@ -730,3 +730,50 @@ footer a {
     animation: none;
   }
 }
+
+.shape-blend {
+  inline-size: 7rem;
+  block-size: 7rem;
+  border-radius: 50%;
+  background: #38bdf8;
+  position: relative;
+  animation: blendMove 3s ease-in-out infinite alternate;
+}
+
+.shape-blend::after {
+  content: "";
+  position: absolute;
+  inline-size: 7rem;
+  block-size: 7rem;
+  border-radius: 50%;
+  background: #f472b6;
+  mix-blend-mode: multiply;
+  animation: blendOverlap 3s ease-in-out infinite alternate;
+}
+
+@keyframes blendMove {
+  from {
+    transform: translateX(-1rem);
+  }
+
+  to {
+    transform: translateX(1rem);
+  }
+}
+
+@keyframes blendOverlap {
+  from {
+    transform: translateX(-2rem);
+  }
+
+  to {
+    transform: translateX(2rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shape-blend,
+  .shape-blend::after {
+    animation: none;
+  }
+}
