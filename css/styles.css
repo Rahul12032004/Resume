@@ -717,3 +717,66 @@ footer a {
     transition: none;
   }
 }
+
+/* Smooth navigation hover effects */
+.nav-links a {
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--neutral-3);
+  transform: translateY(-0.125rem);
+}
+
+/* Smooth button hover effects */
+.nav-links .contact-btn,
+.close-btn {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.nav-links .contact-btn:hover,
+.close-btn:hover {
+  transform: translateY(-0.125rem);
+}
+
+/* Logotype animation on page load */
+.navbar .logo {
+  animation: logoReveal 1s ease-out both;
+  transition: color 0.3s ease;
+}
+
+.navbar .logo:hover {
+  color: var(--neutral-3);
+}
+
+@keyframes logoReveal {
+  from {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .navbar .logo {
+    animation: none;
+  }
+
+  .nav-links a,
+  .nav-links .contact-btn,
+  .close-btn,
+  .navbar .logo {
+    transition: none;
+  }
+}
