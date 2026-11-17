@@ -780,3 +780,22 @@ footer a {
     transition: none;
   }
 }
+.projects .project-card {
+  display: flex;
+  flex-direction: column;
+  grid-row: auto;
+  gap: 0.75rem;
+}
+
+.projects .project-card a[href="resume.203/animations.html"],
+.projects .project-card a[href="svg-project.html"] {
+  display: inline-block;
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 0.6rem 1rem;
+  background: var(--accent);
+  color: var(--neutral-1);
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+}
