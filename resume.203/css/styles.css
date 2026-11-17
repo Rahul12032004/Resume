@@ -772,3 +772,42 @@ footer a {
     animation: none;
   }
 }
+
+.svg-project .svg-animation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  margin-inline: auto;
+  padding: 1.5rem;
+}
+
+.svg-project .svg-illustration {
+  display: block;
+  width: 100%;
+  max-width: 650px;
+  height: auto;
+  aspect-ratio: 874.36 / 880.5;
+}
+
+.svg-project .svg-showcase {
+  width: min(100% - 2rem, 1000px);
+  margin-inline: auto;
+  padding-block: 3rem;
+  text-align: center;
+}
+
+.svg-project .svg-showcase p {
+  margin-block: 1rem 2rem;
+}
+
+@media (max-width: 600px) {
+  .svg-project .svg-animation-container {
+    padding: 0.5rem;
+  }
+
+  .svg-project .svg-showcase {
+    padding-block: 2rem;
+  }
+}
