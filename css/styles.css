@@ -11,6 +11,9 @@
   --neutral-7: oklch(from var(--neutral) 40% c h);
   --neutral-8: oklch(from var(--neutral) 28% c h);
   --neutral-9: oklch(from var(--neutral) 18% c h);
+  --animation-blue: oklch(70% 0.14 250);
+  --animation-cyan: oklch(78% 0.13 220);
+  --animation-pink: oklch(75% 0.16 350);
 
   --accent: oklch(55% 0.12 155);
 
@@ -88,7 +91,8 @@ h2 {
 }
 
 /* Resume */
-.resume header {
+.resume header,
+.projects header {
   background: var(--accent);
   color: var(--neutral-1);
   padding-block: 2.5rem;
@@ -152,13 +156,6 @@ h2 {
 }
 
 /* Projects page */
-.projects header {
-  background: var(--accent);
-  color: var(--neutral-1);
-  padding-block: 2.5rem;
-  padding-inline: 1.25rem;
-  text-align: center;
-}
 
 .projects header h2 {
   font-family: var(--font-body);
@@ -192,10 +189,9 @@ h2 {
   background: var(--neutral-2);
   padding: 1.25rem;
   border-radius: 0.5rem;
-  display: grid;
-  grid-row: span 3;
-  grid-template-rows: subgrid;
-  row-gap: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 .project-card img {
@@ -643,7 +639,7 @@ footer a {
   inline-size: 7rem;
   block-size: 7rem;
   border-radius: 50%;
-  background: #38bdf8;
+  background: var(--animation-pink);
   position: relative;
   animation: blendMove 3s ease-in-out infinite alternate;
 }
@@ -654,7 +650,7 @@ footer a {
   inline-size: 7rem;
   block-size: 7rem;
   border-radius: 50%;
-  background: #f472b6;
+  background: var(--animation-pink);
   mix-blend-mode: multiply;
   animation: blendOverlap 3s ease-in-out infinite alternate;
 }
@@ -684,37 +680,6 @@ footer a {
   .shape-blend,
   .shape-blend::after {
     animation: none;
-  }
-}
-
-.projects .project-card:has(a[href="animations.html"]) {
-  grid-row: span 4;
-}
-
-.projects .project-card a[href="animations.html"] {
-  display: inline-block;
-  align-self: end;
-  justify-self: start;
-  padding-block: 0.5rem;
-  padding-inline: 1rem;
-  border-radius: 0.5rem;
-  background: var(--accent);
-  color: var(--neutral-1);
-  text-decoration: none;
-  font-weight: 600;
-  transition:
-    background-color 0.3s ease,
-    transform 0.3s ease;
-}
-
-.projects .project-card a[href="animations.html"]:hover {
-  background: var(--neutral-9);
-  transform: translateY(-0.25rem);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .projects .project-card a[href="animations.html"] {
-    transition: none;
   }
 }
 
@@ -780,22 +745,39 @@ footer a {
     transition: none;
   }
 }
-.projects .project-card {
-  display: flex;
-  flex-direction: column;
-  grid-row: auto;
-  gap: 0.75rem;
-}
 
-.projects .project-card a[href="resume.203/animations.html"],
-.projects .project-card a[href="svg-project.html"] {
+.project-card > a {
   display: inline-block;
   align-self: flex-start;
-  margin-top: auto;
-  padding: 0.6rem 1rem;
+  margin-block-start: auto;
+  padding-block: 0.6rem;
+  padding-inline: 1rem;
   background: var(--accent);
   color: var(--neutral-1);
   border-radius: 0.5rem;
   text-decoration: none;
   font-weight: 600;
+}
+
+.project-card > a {
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.project-card > a:hover,
+.project-card > a:focus-visible {
+  background: var(--neutral-9);
+  transform: translateY(-0.25rem);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-card > a {
+    transition: none;
+  }
+
+  .project-card > a:hover,
+  .project-card > a:focus-visible {
+    transform: none;
+  }
 }
