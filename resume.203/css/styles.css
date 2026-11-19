@@ -846,7 +846,6 @@ footer a {
   gap: 0.75rem;
 }
 
- 
 .projects .project-card a[href="resume.203/animations.html"],
 .projects .project-card a[href="svg-project.html"] {
   display: inline-block;
@@ -863,7 +862,6 @@ footer a {
     background-color 0.3s ease,
     transform 0.3s ease;
 }
-
 
 .projects .project-card a[href="resume.203/animations.html"]:hover,
 .projects .project-card a[href="svg-project.html"]:hover {
