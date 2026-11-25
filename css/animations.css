@@ -1,3 +1,79 @@
+.animations {
+  min-block-size: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.animation-header {
+  background: var(--accent);
+  color: var(--neutral-1);
+  text-align: center;
+  padding-block: 3rem;
+  padding-inline: 1.25rem;
+}
+
+.animation-header p {
+  margin-block-end: 0;
+}
+
+.animation-main {
+  inline-size: 100%;
+  max-inline-size: 62.5rem;
+  margin-inline: auto;
+  padding-block: 2.5rem;
+  padding-inline: 1.25rem;
+  flex: 1;
+}
+
+.animation-main > h2 {
+  border-block-end: 0.125rem solid var(--accent);
+  padding-block-end: 0.5rem;
+}
+
+.animation-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.animation-card {
+  background: var(--neutral-2);
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  min-inline-size: 0;
+}
+
+.animation-card h3 {
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.animation-stage {
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  inline-size: 100%;
+  block-size: 13rem;
+  background: var(--neutral-1);
+  border-radius: 0.5rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .animation-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.shape-clip {
+  inline-size: 7rem;
+  block-size: 7rem;
+  background: var(--accent);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  animation: clipMorph 3s ease-in-out infinite alternate;
+}
+
 @keyframes clipMorph {
   0% {
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);

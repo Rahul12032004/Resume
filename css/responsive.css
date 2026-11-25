@@ -1,0 +1,57 @@
+/* Responsive layout for wider screens */
+@media screen and (min-width: 34rem) {
+  .home header {
+    padding-block: 5rem;
+    padding-inline: 1.875rem;
+  }
+
+  .resume header {
+    padding-block: 3.125rem;
+    padding-inline: 1.875rem;
+  }
+
+  .home main,
+  .resume main {
+    padding-block: 2.5rem;
+    padding-inline: 1.875rem;
+  }
+
+  .resume main section img {
+    float: inline-start;
+    inline-size: 15.625rem;
+    margin-block: 0 0.9375rem;
+    margin-inline: 0 1.5625rem;
+  }
+
+  .resume main section {
+    overflow: auto;
+  }
+
+  .projects header {
+    padding-block: 3.125rem;
+    padding-inline: 1.875rem;
+  }
+
+  .projects main {
+    padding-block: 2.5rem;
+    padding-inline: 1.875rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Desktop navigation */
+@media screen and (min-width: 48rem) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-block: 1rem;
+    padding-inline: max(1.875rem, calc((100% - 62.5rem) / 2));
+  }
+
+  .nav-links {
+    gap: 2rem;
+  }
+}
