@@ -1,0 +1,191 @@
+@keyframes clipMorph {
+  0% {
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  }
+
+  50% {
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%, 0% 100%);
+  }
+
+  100% {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+
+.shape-filter {
+  inline-size: 7rem;
+  block-size: 7rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), #60a5fa);
+  animation: filterPulse 3s ease-in-out infinite alternate;
+}
+
+@keyframes filterPulse {
+  0% {
+    filter: blur(0) brightness(1);
+    transform: scale(1);
+  }
+
+  50% {
+    filter: blur(0.25rem) brightness(1.5);
+    transform: scale(1.2);
+  }
+
+  100% {
+    filter: blur(0) brightness(0.8);
+    transform: scale(0.9);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shape-filter {
+    animation: none;
+  }
+}
+
+.shape-blend {
+  inline-size: 7rem;
+  block-size: 7rem;
+  border-radius: 50%;
+  background: var(--animation-pink);
+  position: relative;
+  animation: blendMove 3s ease-in-out infinite alternate;
+}
+
+.shape-blend::after {
+  content: "";
+  position: absolute;
+  inline-size: 7rem;
+  block-size: 7rem;
+  border-radius: 50%;
+  background: var(--animation-pink);
+  mix-blend-mode: multiply;
+  animation: blendOverlap 3s ease-in-out infinite alternate;
+}
+
+@keyframes blendMove {
+  from {
+    transform: translateX(-1rem);
+  }
+
+  to {
+    transform: translateX(1rem);
+  }
+}
+
+@keyframes blendOverlap {
+  from {
+    transform: translateX(-2rem);
+  }
+
+  to {
+    transform: translateX(2rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shape-clip,
+  .shape-blend,
+  .shape-blend::after {
+    animation: none;
+  }
+}
+
+/* Smooth navigation hover effects */
+.nav-links a {
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--neutral-3);
+  transform: translateY(-0.125rem);
+}
+
+/* Smooth button hover effects */
+.nav-links .contact-btn,
+.close-btn {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.nav-links .contact-btn:hover,
+.close-btn:hover {
+  transform: translateY(-0.125rem);
+}
+
+/* Logotype animation on page load */
+.navbar .logo {
+  animation: logoReveal 1s ease-out both;
+  transition: color 0.3s ease;
+}
+
+.navbar .logo:hover {
+  color: var(--neutral-3);
+}
+
+@keyframes logoReveal {
+  from {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .navbar .logo {
+    animation: none;
+  }
+
+  .nav-links a,
+  .nav-links .contact-btn,
+  .close-btn,
+  .navbar .logo {
+    transition: none;
+  }
+}
+
+.project-card > a {
+  display: inline-block;
+  align-self: flex-start;
+  margin-block-start: auto;
+  padding-block: 0.6rem;
+  padding-inline: 1rem;
+  background: var(--accent);
+  color: var(--neutral-1);
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.project-card > a {
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.project-card > a:hover,
+.project-card > a:focus-visible {
+  background: var(--neutral-9);
+  transform: translateY(-0.25rem);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-card > a {
+    transition: none;
+  }
+
+  .project-card > a:hover,
+  .project-card > a:focus-visible {
+    transform: none;
+  }
+}
