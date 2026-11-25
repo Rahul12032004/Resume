@@ -1,0 +1,23 @@
+:root {
+  /* Neutral colour system */
+  --neutral: oklch(50% 0.02 250);
+
+  --neutral-1: oklch(from var(--neutral) 98% c h);
+  --neutral-2: oklch(from var(--neutral) 92% c h);
+  --neutral-3: oklch(from var(--neutral) 84% c h);
+  --neutral-4: oklch(from var(--neutral) 74% c h);
+  --neutral-5: oklch(from var(--neutral) 64% c h);
+  --neutral-6: oklch(from var(--neutral) 52% c h);
+  --neutral-7: oklch(from var(--neutral) 40% c h);
+  --neutral-8: oklch(from var(--neutral) 28% c h);
+  --neutral-9: oklch(from var(--neutral) 18% c h);
+
+  --animation-blue: oklch(70% 0.14 250);
+  --animation-cyan: oklch(78% 0.13 220);
+  --animation-pink: oklch(75% 0.16 350);
+
+  --accent: oklch(55% 0.12 155);
+
+  --font-body: Arial, sans-serif;
+  --font-heading: Georgia, serif;
+}
